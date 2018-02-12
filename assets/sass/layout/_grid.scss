@@ -1,0 +1,53 @@
+
+.projects-grid {
+	display: grid;
+	position: relative;
+	grid-template-columns: 50% 50%;
+  	grid-template-rows: 100% 100%;
+}
+
+.title {
+	line-height: 200px;
+	text-align: center;
+	h1 {
+		vertical-align: middle;
+	}
+}
+
+.project {
+ 	position: relative;
+ 	color: $white;
+ 	img {
+ 		width: 100%;
+ 		height: 100%;
+ 		overflow: hidden;
+ 		position: relative; 
+ 	}
+ 	.project-title{
+ 		position: absolute;
+ 		bottom: 0;
+    	left: 0;
+    	padding: 4%
+
+ 	}
+ 	.overlay {
+ 		padding: 4%;
+ 		position: absolute;
+ 		top: 0;
+ 		opacity: 0;
+ 		min-height: 88%;
+ 		background-color: $violet;
+ 		overflow: hidden;
+ 		h2 {
+ 			padding-bottom: 4%;
+ 		}
+ 	}
+ 	&:hover {
+ 		.overlay {
+ 			opacity: 1
+ 		}
+ 		.project-title {
+ 			opacity: 0;
+ 		}
+ 	}
+}
