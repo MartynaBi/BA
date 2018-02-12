@@ -4,13 +4,47 @@
   padding: 0; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%; }
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  padding-bottom: 20px; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 3.5rem;
+  line-height: 3.7rem;
+  text-align: left; }
 
 section {
-  width: 100%; }
+  width: 100%;
+  height: auto; }
 
-.home-screen {
+.section-full {
   height: 100vh; }
+
+/*section.projects, section.services {
+	height: auto;
+}*/
+.services {
+  background-color: blue; }
+
+.left {
+  width: 25%;
+  float: left;
+  overflow: hidden; }
+
+.right {
+  width: 55%;
+  float: right; }
+
+.left, .right {
+  height: 100%;
+  padding: 5%; }
 
 .projects-grid {
   display: grid;

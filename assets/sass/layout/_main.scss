@@ -3,17 +3,31 @@ $white: white;
 
 section {
 	width: 100%;
-	
+	height: auto;
 }
 
-.home-screen {
+.section-full {
 	height: 100vh;
+}
+/*section.projects, section.services {
+	height: auto;
+}*/
+.services {
+	background-color: blue;
 }
 
 .left{
-	width: 30%;
+	width: 25%;
+	float: left;
+	overflow: hidden;
 }
 
-.grid {
-	width: 60%;
+.right {
+	width: 55%;
+	float: right;
+}
+
+.left, .right {
+	height: 100%;
+	padding: 5%;
 }
