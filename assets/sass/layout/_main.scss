@@ -102,6 +102,13 @@ section {
 	height: 50%;
 	width: 200%;
 	overflow: hidden;
+	&:first-of-type{
+		transform: translateX(-5%);
+		-webkit-transform: translateX(-5%);
+		-moz-transform: translateX(-5%);
+		-o-transform: translateX(-5%); 
+	}
+	
 
 	img {
 		height: 100%;
@@ -129,6 +136,15 @@ section {
 
 .bg-light-violet {
 	background-color: $light_violet;
+}
+
+.tint-black {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: $black;
+	top: 0;
+	opacity: 0.3;
 }
 
 .text-block {
