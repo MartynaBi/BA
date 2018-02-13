@@ -4,19 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Fronend Task</title>	
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="assets/js/myscripts.js"></script>
 </head>
-<body>
+<body onload="startTimer()">
 	<section id="home-screen" class=" section-full bg-black">
 		<div class="left title-white">
 		</div>
 		<div class="right">
 			<div class="row">
-				<img src="assets/img/screen1.jpg" alt="">
-				<img src="assets/img/screen2.png" alt="">
+				<img id="img0" src="assets/img/screen/screen1.jpg" alt="">
+				<img id="img1" src="assets/img/screen/screen2.png" alt="">
 			</div>
 			<div class="row">
-				<img src="assets/img/screen3.jpg" alt="">
-				<img src="assets/img/screen2.jpg" alt="">
+				<img id="img2" src="assets/img/screen/screen3.jpg" alt="">
+				<img id="img3" src="assets/img/screen/screen2.jpg" alt="">
 			</div>	
 			<div class="tint-black"> </div>		
 		</div>
@@ -105,7 +106,7 @@
 	</section>
 	<section id="about-us">
 		<div class="left title">
-			<h3>About us</h3>
+			<h3>About </br> Us</h3>
 		</div>
 		<div class="right">
 			<div class="text-block">
@@ -116,7 +117,7 @@
 	</section>
 	<section id="services">
 		<div class="left title-white bg-violet middle">
-			<h3>Our services</h3>
+			<h3>Our Services</h3>
 		</div>
 		<div class="right ">
 			<ul class="list-services">
@@ -133,7 +134,7 @@
 	</section>
 	<section id="know-us" class="section-full center">
 		<div class="title-big">
-			<h3>Know us</h3>
+			<h1>Know us</h1>
 		</div>
 	</section>
 
@@ -142,17 +143,24 @@
 			<h4>Fill the form and download our <span class="yellow"> presentation <span></h4>
 		</div>
 		<div class="right">
-			<ul class="list-services">
-				<li><span>01 </span>First name </li>
-				<li><span>02 </span>Last name </li>
-				<li><span>03 </span>Email </li>
-			</ul>
+			<form class="download">
+					<div>				
+						<input id="name" name="name" type="text" required>
+			    		<label for="name"><span>01 </span>First Name</label>
+					</div>
+					<div>			
+						<input id="last_name" name="last_name" type="text" required>
+			    		<label for="last_name"><span>02 </span>Last Name</label>
+					</div>
+					<div>	
+						<input id="email" name="email" type="text" required>
+			    		<label for="email"> <span>03 </span>Email</label>
+					</div>
+			</form>
 
 			<button type="button" class="btn-yellow">Get it!</button>
 		</div>
 	</section>
-
-	<script src="myscripts.js"></script>
 
 </body>
 </html>

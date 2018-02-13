@@ -6,9 +6,10 @@ body {
 }
 
 p{
-	font-size: 1.2rem;
-	line-height: 1.7rem;
-	padding-bottom: 20px;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	padding-bottom: 4rem;
+	text-overflow: ellipsis; 
 }
 
 h1 {
@@ -20,17 +21,25 @@ h2 {
 }
 
 h3 {
-	font-size: 4rem;
-	line-height: 4.2rem;
+	font-size: 5.3rem;
+	line-height: 7rem;
 	text-align: left;
 }
 
 h4 {
-	font-size: 2rem;
-	line-height: 2.5rem;
+	font-size: 2.5rem;
+	line-height: 3.5rem;
 	text-align: left;
 	color: $white;
 	font-weight: normal;
+}
+
+header, .title-big{
+	h1 {
+		font-size: 9rem;
+		line-height: 9.4rem;
+		padding-bottom: 5%;
+	}
 }
 
 @media (max-width: $breakpoint-laptop) {
@@ -40,25 +49,15 @@ h4 {
 	}
 
 li {
-	font-size: 1.4rem;
-	line-height: 1.8rem;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
 	padding-top: 15px;
 	padding-bottom: 15px;
-}
-
-
-.title-big {
-	h3 {
-		font-size: 7rem;
-		line-height: 7rem;
-		text-align: center;
-	}
 }
 
 .title {
 	text-align: center;
 	h1 {
-		font-size: 3rem;
 		vertical-align: middle;
 	}
 }

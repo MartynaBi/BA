@@ -14,9 +14,10 @@ body {
   font-size: 100%; }
 
 p {
-  font-size: 1.2rem;
-  line-height: 1.7rem;
-  padding-bottom: 20px; }
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 4rem;
+  text-overflow: ellipsis; }
 
 h1 {
   font-size: 2.5rem; }
@@ -25,36 +26,35 @@ h2 {
   font-size: 2.5rem; }
 
 h3 {
-  font-size: 4rem;
-  line-height: 4.2rem;
+  font-size: 5.3rem;
+  line-height: 7rem;
   text-align: left; }
 
 h4 {
-  font-size: 2rem;
-  line-height: 2.5rem;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   text-align: left;
   color: white;
   font-weight: normal; }
+
+header h1, .title-big h1 {
+  font-size: 9rem;
+  line-height: 9.4rem;
+  padding-bottom: 5%; }
 
 @media (max-width: 1200px) {
   h3 {
     font-size: 2.5rem; } }
 
 li {
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   padding-top: 15px;
   padding-bottom: 15px; }
-
-.title-big h3 {
-  font-size: 7rem;
-  line-height: 7rem;
-  text-align: center; }
 
 .title {
   text-align: center; }
   .title h1 {
-    font-size: 3rem;
     vertical-align: middle; }
 
 * {
@@ -67,6 +67,8 @@ header {
   position: absolute;
   top: 40%;
   padding-left: 5%; }
+  header h1 {
+    color: white; }
   header:after {
     content: "";
     position: absolute;
@@ -76,17 +78,13 @@ header {
     width: 80%;
     border-bottom: 15px solid #5719e4;
     animation: 1s ease-out 0s 1 slideIn; }
-  header h1 {
-    font-size: 8rem;
-    line-height: 8.4rem;
-    color: white;
-    padding-bottom: 5%; }
 
 section {
   width: 100%;
   height: auto;
   padding-top: 10%;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   section:after {
     content: "";
     clear: both;
@@ -115,7 +113,7 @@ section {
     opacity: .8; }
 
 .left {
-  width: 20%;
+  width: 25%;
   float: left;
   overflow: hidden;
   padding-left: 10%;
@@ -125,7 +123,7 @@ section {
   height: 60%; }
 
 .right {
-  width: 60%;
+  width: 55%;
   float: right;
   height: 100%;
   overflow: hidden; }
@@ -140,12 +138,19 @@ section {
     padding-left: 10%;
     padding-top: 10%; } }
 
+@media (max-width: 768px) {
+  #home-screen .right {
+    display: none; } }
+
 .row {
   height: 50%;
   width: 200%;
   overflow: hidden; }
   .row:first-of-type {
-    transform: translateX(-5%); }
+    transform: translateX(-5%);
+    -webkit-transform: translateX(-5%);
+    -moz-transform: translateX(-5%);
+    -o-transform: translateX(-5%); }
   .row img {
     height: 100%;
     display: inline-flex; }
@@ -209,7 +214,7 @@ ul li {
   ul li:hover {
     border-bottom: 2px solid #662AFD; }
 
-.list-services span {
+.list-services span, form span {
   padding-right: 15px;
   color: #C8C8C8;
   font-weight: bold; }
@@ -218,7 +223,9 @@ ul li {
   display: grid;
   position: relative;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100% 100%; }
+  /*grid-template-rows: 100% 100% 100% 100%;*/
+  grid-template-rows: 500px 500px 500px 500px;
+  grid-row-gap: 0; }
 
 @media (max-width: 1200px) {
   .projects-grid {
@@ -231,10 +238,10 @@ ul li {
   position: relative;
   color: white; }
   .project img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative; }
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden; }
   .project .project-title {
     position: absolute;
     bottom: 0;
@@ -246,6 +253,7 @@ ul li {
     top: 0;
     opacity: 0;
     min-height: 88%;
+    max-height: 100%;
     background-color: rgba(87, 25, 228, 0.7);
     overflow: hidden; }
     .project .overlay h2 {
@@ -268,3 +276,40 @@ ul li {
   .btn-yellow:hover {
     background-color: #161616;
     color: white; }
+
+form {
+  width: 100%;
+  overflow: hidden; }
+  form div {
+    position: relative;
+    overflow: hidden; }
+  form input {
+    width: 100%;
+    border-bottom: 2px solid #662AFD;
+    background: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 12px 15px;
+    outline: 0;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    color: #EFFF09;
+    font-weight: bold;
+    margin-bottom: 20px; }
+    form input:focus {
+      border-color: #662AFD; }
+    form input:focus + label {
+      color: white;
+      font-size: 70%;
+      padding: 1px 6px;
+      z-index: 2; }
+  form label {
+    position: absolute;
+    font-size: 1.7rem;
+    padding: 7px 6px;
+    color: white;
+    opacity: 0.5;
+    top: 0;
+    transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s; }

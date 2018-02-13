@@ -1,0 +1,49 @@
+form {
+  width: 100%;
+  overflow: hidden;
+  div {
+    position: relative;
+    overflow: hidden;
+  }
+  input {
+    width: 100%;
+    border-bottom: 2px solid $light_violet; 
+    background: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 12px 15px;
+    outline: 0;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    color: $yellow;
+    font-weight: bold;
+    margin-bottom: 20px;
+    &:focus {
+      border-color: $light_violet;
+    }
+    &:focus + label {
+      color: white;
+      font-size: 70%;
+      padding: 1px 6px;
+      z-index: 2;
+    }
+  }
+  label {
+    position: absolute;
+    font-size: 1.7rem;
+    padding: 7px 6px;
+    color: $white;
+    opacity: 0.5;
+    top: 0;
+    transition: // not padding
+      background 0.2s,
+      color 0.2s,
+      top 0.2s,
+      bottom 0.2s,
+      right 0.2s,
+      left 0.2s;
+  }
+
+}

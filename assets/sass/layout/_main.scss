@@ -8,6 +8,9 @@ header {
 	position: absolute;
 	top: 40%;
 	padding-left: 5%;
+	h1 {
+		color: $white;
+	}
 	&:after {
 	  content : "";
 	  position: absolute;
@@ -18,20 +21,14 @@ header {
 	  border-bottom: 15px solid $violet;
 	  animation: 1s ease-out 0s 1 slideIn;
 	}
-
-	h1 {
-		font-size: 8rem;
-		line-height: 8.4rem;
-		color: $white;
-		padding-bottom: 5%;
-	}
-
 }
+
 section {
 	width: 100%;
 	height: auto;
 	padding-top: 10%;
 	position: relative;
+	overflow: hidden;
 
 		&:after {
 	    content:"";
@@ -67,7 +64,7 @@ section {
 }
 
 .left{
-	width: 20%;
+	width: 25%;
 	float: left;
 	overflow: hidden;
 	padding-left: 10%;
@@ -79,7 +76,7 @@ section {
 }
 
 .right {
-	width: 60%;
+	width: 55%;
 	float: right;
 	height: 100%;
 	overflow: hidden;
@@ -95,6 +92,12 @@ section {
 		float: none;
 		padding-left: 10%;
 		padding-top: 10%;
+	}
+}
+
+@media (max-width: $breakpoint-tablet) {
+	#home-screen .right{
+		display: none;
 	}
 }
 
@@ -167,8 +170,8 @@ section {
 		position: relative;
 		display: block;
 		h3, h4 {
-		position: relative;
-	}
+			position: relative;
+		}
 	}
 }
 
@@ -191,7 +194,7 @@ ul li {
 	}
 }
 
-.list-services {
+.list-services, form {
 	span {
 		padding-right: 15px;
 		color: $grey;
